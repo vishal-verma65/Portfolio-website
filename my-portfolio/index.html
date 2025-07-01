@@ -2,13 +2,80 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/logo.jpg" />
+    <link rel="icon" type="image/webp" href="/images/logo.webp.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vishal Verma | Front-end Developer | Portfolio</title>
+    <link rel="stylesheet" href="./src/style.css">
   </head>
   <body>
-    <div id="app"></div>
+   
+    <header class="navbar-section">
+      <div class="container">
+        <nav class="navbar">
+          <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
+          </ul>
+
+          <div class="logo-container">
+            <a href="index.html">
+              <img src="/images/logo.webp" alt="Logo name Vishal Verma" width="100%" height="auto">
+            </a>
+          </div>
+
+          <ul>
+            <li class="nav-item"><a href="#" class="nav-link">WORKS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="container flex-col-c hero">
+          <div class="hero-heading ">
+            
+              <p class="hii-para">Hii, I am a</p>
+              <h1 class="hero-text">
+                <span class="line line-1">Front-end</span>
+                </br>
+                <span class="line line-2">Developer</span>
+              </h1>
+
+          </div>
+
+          <div class="hero-para-container">
+              <p>{ <span class="hero-para ">
+                <span>"Turning ideas into interactive experiences"</span> 
+              </br>
+                <span>"Showcasing what I love to do"</span>
+              </span> }</p>
+          </div>
+          
+          <!-- scroll to explore more circle -->
+          <div class="scroll-circle">
+            <img src="/images/scroll-down-circle.webp" alt="Scroll to explore in a circle">
+            <div class="circle">
+              <div class="inner-circle"></div>
+            </div>
+          </div>
+
+          <!-- theme toggler  -->
+          <div class="theme-toggle-container flex-column">
+            <div class="sun"></div>
+            <div class="moon"></div>
+            <div class="ball"></div>
+          </div>
+
+        </div>
+
+        <!-- <div class="container"></div> -->
+
+      </section>
+    </main>
+
     <script type="module" src="/src/main.js"></script>
-    <a href=""></a>
   </body>
 </html>
