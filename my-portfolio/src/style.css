@@ -187,11 +187,12 @@ a {
 .navbar-section{
   width: 100%;
   max-height: 5vw;
+  user-select: none;
   /* background-color: #fff; */
   
   & .container{
-    /* background-color: #890d0d; */
-   
+    background-color: var(--primaryColor);
+    z-index: 10;
     padding: 1rem; 
   }
   & .logo-container img{
@@ -200,7 +201,7 @@ a {
   .navbar{
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--secondaryColor);
+    /* border-bottom: 1px solid var(--secondaryColor); */
 
     & ul{
       display: flex;
@@ -231,14 +232,18 @@ main{
   /* background-color: #8a0505; */
   & .container{
     height: 100%;
-    /* background-color: #b12323; */
+    /* background-color: #17065b; */
+    position: relative;
   }
 }
 .hero-section .hero-heading{
   text-align: left;
   position: relative;
   z-index: 1;
+  /* overflow: hidden; */
   /* background-color: #2ae65c; */
+  width: fit-content;
+  
 
   & h1{
     /* background-color: #3dc223; */
@@ -255,6 +260,7 @@ main{
     
     & span{
       display: inline-block;
+      overflow: hidden;
     }
 
     & .line-1{
@@ -272,72 +278,21 @@ main{
       -ms-transform: translate(13%);
       -o-transform: translate(13%);
       position: relative;
+      /* background-color: #7b0e0e; */
+      height: 12rem;
 }
   }
 
   & .hii-para{
     font-size: 3rem;
     font-weight: 600;
+    padding-bottom: .5rem;
     transform: translateX(-13.5%) translateY(-40%);
     -webkit-transform: translateX(-13.5%) translateY(-40%);
     -moz-transform: translateX(-13.5%) translateY(-40%);
     -ms-transform: translateX(-13.5%) translateY(-40%);
     -o-transform: translateX(-13.5%) translateY(-40%);
 }
-}
-.hero-heading::before{
-  content: "";
-  width: 97%;
-  height: 100%;
-  position: absolute;
-  top: 4%;
-  left: -2%;
-  background-image: url("/images/hero-bg-curve.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  /* background-color: #582eb8; */
-  z-index: 0;
-}
-.line-2::after{
-  content: "";
-  width: 60%;
-  height: 140%;
-  position: absolute;
-  top: -100%;
-  right: -31%;
-  background-image: url("/images/hero-ribbon.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  /* background-color: #d40808; */
-}
-.line-1::before{
-  content: "";
-  width: 20%;
-  height: 80%;
-  position: absolute;
-  bottom: -25%;
-  right: -35.5%;
-  background-image: url("/images/hero-flower.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  /* background-color: #d40808; */
-}
-.line-2::before{
-  content: "";
-  width: 15%;
-  height: 80%;
-  position: absolute;
-  bottom: -40%;
-  left: -8%;
-  background-image: url("/images/hero-ribbon-d.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2;
-  /* background-color: #d40808; */
 }
 
 .hero-para-container{
@@ -363,6 +318,70 @@ main{
     text-align: right;
   }
 }
+/*hero background curve style*/
+.hero-bg{
+  position: absolute;
+  width: 65rem;
+  height: auto;
+  padding: 0 9rem 5.5rem 5rem;
+  /* background-color: #940f7a; */
+  transform: translate(-50% -50%);
+  -webkit-transform: translate(-50% -50%);
+  -moz-transform: translate(-50% -50%);
+  -ms-transform: translate(-50% -50%);
+  -o-transform: translate(-50% -50%);
+  overflow: hidden;
+  user-select: none;
+
+  & img{
+    object-fit: cover;
+    animation: spin 2s ease-in-out;
+    transform-origin: top center;    
+  }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotateZ(360deg); -webkit-transform: rotateZ(360deg); -moz-transform: rotateZ(360deg); -ms-transform: rotateZ(360deg); -o-transform: rotateZ(360deg); }
+}
+.hero-bg-ribbon{
+  position: absolute;
+  bottom: 40%;
+  right: -40%;
+  width: 25rem;
+  height: auto;
+  user-select: none;
+  /* background-color: #940f7a;*/
+
+   & img{
+    object-fit: cover;   
+  }
+}
+.hero-bg-flower{
+  position: absolute;
+  bottom: 45%;
+  right: -18%;
+  width: 11rem;
+  height: auto;
+  user-select: none;
+  /* background-color: #940f7a;*/
+
+   & img{
+    object-fit: cover;    
+  }
+}
+.hero-bg-ribbon-d{
+  position: absolute;
+  bottom: -4%;
+  left: 4%;
+  width: 10rem;
+  height: auto;
+  user-select: none;
+  z-index: 2;
+  /* background-color: #940f7a;*/
+  & img{
+    object-fit: cover;   
+  }
+}
 /***** End Hero Section *****/
 
 /***** Scroll to explore style *****/  
@@ -376,6 +395,7 @@ main{
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  user-select: none;
 
   & img{
     width: 10rem;
@@ -427,6 +447,7 @@ main{
   -ms-border-radius: 10rem;
   -o-border-radius: 10rem;
   overflow: hidden;
+  user-select: none;
 }
 .sun{
   /* background-color: #fff; */
