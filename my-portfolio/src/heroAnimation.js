@@ -8,6 +8,29 @@ gsap.registerPlugin(ScrambleTextPlugin, SplitText, ScrollTrigger);
 
 export const heroAnimation = ()=> {
 
+    ScrollTrigger.create({
+        trigger: ".collaborate-section",
+        start: "top top",  
+        onEnter: () => {
+            gsap.to(".navbar-section", {
+                backgroundColor: "transparent",
+                y: -100, 
+                opacity: 0,
+                duration: 0.5,
+            });
+        },
+        onLeaveBack: () => {
+            gsap.to(".navbar-section", {
+                backgroundColor: "#071E22",
+                y: 0, 
+                opacity: 1,
+                duration: 0.5,
+            });
+        }
+        });
+
+
+
     gsap.to(".hii-para",{
         duration: 2,
         ease: "none",
@@ -33,7 +56,7 @@ export const heroAnimation = ()=> {
 
         rotation += 5 * direction;
 
-        gsap.to(".scroll-circle img",{
+        gsap.to(".scroll-img",{
             rotation: rotation,
             duration: 1,
             ease: "power3.out",
@@ -236,14 +259,9 @@ export const heroAnimation = ()=> {
     //         chars: " ",
     //         // autoAlpha: 1,
     //     }})
-    
-
-    
-    
-
-    
 
 };
+
 // //*using SplitText 
 // let split = SplitText.create(".split", {type: "chars"});
 
@@ -279,17 +297,4 @@ export const heroAnimation = ()=> {
 //         newClass: "myClass",
 //     }   
 // });
-// gsap.to(".page2", {
-//     rotate: 360,
-//     scale: 3,
-//     // repeat: -1,
-//     duration: 2,
-//     scrollTrigger: {
-//         trigger: ".page2",
-//         scroller: "body",
-//         start: "top 70%",
-//         end: "top 10%",
-//         scrub: 3,
-//         markers: true,
-//     }
-// });
+//

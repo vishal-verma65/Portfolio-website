@@ -6,31 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vishal Verma | Front-end Developer | Portfolio</title>
     <link rel="stylesheet" href="./src/style.css">
-    <!-- <style>
-      .box1{
-        background-color: #b81b1b;
-        z-index: 2;
-
-        & h1{
-          font-size: 10rem;
-        }
-      }
-      .container{
-        height: 100vh;
-        position: relative;
-      }
-      .box2{
-        background-color: #fff;
-        height: 20rem;
-        width: 60rem;
-        position: absolute;
-        transform: translate(-50% -50%);
-        z-index: 1;
-      }
-    </style> -->
   </head>
   <body>
    
+    <!-- ========== Start Navbar Section ========== -->
     <header class="navbar-section">
       <div class="container">
         <nav class="navbar">
@@ -53,8 +32,12 @@
       </div>
 
     </header>
+    <!-- ========== End Navbar Section ========== -->
+    
 
+    <!-- ========== Start main Section ========== -->
     <main>
+      <!-- ========== Start Hero Section ========== -->
       <section class="hero-section">
         <div class="container flex-col-c hero">
           <div class="hero-heading ">
@@ -92,10 +75,13 @@
           
           <!-- scroll to explore more circle -->
           <div class="scroll-circle">
-            <img src="/images/scroll-down-circle.webp" alt="Scroll to explore in a circle">
+            <img class="scroll-img" src="/images/scroll-down-circle.webp" alt="Scroll to explore in a circle">
             <div class="circle">
-              <div class="inner-circle"></div>
+              <div class="down-arrow-div">
+              <img src="/images/down-arrow.svg" alt="down arrow" width="100%" height="auto">
             </div>
+              <div class="inner-circle"></div>
+            </div> 
           </div>
 
           <!-- theme toggler  -->
@@ -106,9 +92,179 @@
           </div>
 
         </div>
-
       </section>
+      <!-- ========== End Hero Section ========== -->
+      
+      <!-- ========== Start About Section ========== -->
+      <section class="collaborate-section container flex-center">
+        <div class="top-slider flex-vc">
+            <div class="inner-content flex-vc">
+              <h3>COLLABORATE</h3>
+              <div class="slider-icon">
+                <img src="/images/triangle.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+            </div>
+            <div class="inner-content flex-vc">
+              <h3>TRUST</h3>
+              <div class="slider-icon">
+                <img src="/images/triangle.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+            </div>
+            <div class="inner-content flex-vc">
+              <h3>EXCELLENCE</h3>
+              <div class="slider-icon">
+                <img src="/images/triangle.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+            </div>
+            <div class="inner-content flex-vc">
+              <h3>DEVELOP</h3>
+              <div class="slider-icon">
+                <img src="/images/triangle.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+            </div>
+        </div>
+
+        <div class="collaboration-content">
+          <h2>
+            <span class="collab-span">"Let's build a</span></br>
+            <span class="collab-span">
+              <span class="memorable-span">memorable</span> & <i>aspiring</i>
+            </span></br>
+            <span class="collab-span">web application <span class="together-span">together</span>"</span>
+          </h2>
+
+          <div class="collab-flower">
+            <img src="/images/collab-flower.webp" alt="collab section flower" width="100%" height="auto">
+          </div>
+        </div>
+
+        <div class="bottom-slider flex-vc">
+            <div class="inner-content flex-vc">
+              <h3>frontend developer</h3>
+              <div class="slider-icon">
+                <img src="/images/square.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+            </div>
+            <div class="inner-content flex-vc">
+              <h3>Websmith</h3>
+              <div class="slider-icon">
+                <img src="/images/square.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+            </div>
+            <div class="inner-content flex-vc">
+              <h3>frontend designer</h3>
+              <div class="slider-icon">
+                <img src="/images/square.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+            </div>
+            <div class="inner-content flex-vc">
+              <h3>Creative designing</h3>
+              <div class="slider-icon">
+                <img src="/images/square.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+            </div>
+            <div class="inner-content flex-vc">
+              <h3>CONTACT ME</h3>
+              <div class="slider-icon">
+                <img src="/images/square.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+            </div>
+
+        </div>
+
+      </section >
+      <!-- ========== End About Section ========== -->
+    
     </main>
+    <!-- ========== End main Section ========== -->
+    
+
+    <!-- ========== Start footer Section ========== -->
+    <footer class="footer-section container flex-direction-col-vc">
+      <div class="footer-content-container flex-vc">
+
+        <div class="footer-left">
+          <div class="hii-div">
+            <h3>Say hii.</h3>
+            <div class="footer-ribbon">
+              <img src="/images/footer-ribbon.webp" alt="Footer ribbon" width="100%" height="auto">
+            </div>
+          </div>
+          <div class="mail-div">
+            <div class="mail-icon flex-vc">
+              <img src="/images/mail-icon.svg" alt="mail icon" width="100%" height="auto">
+            </div>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sayhello.vishalverma@gmail.com" target="_blank">sayhello.vishalverma@gmail.com</a>
+          </div>
+
+          <div class="footer-para-div">
+            <p> I love to design and make things that are not only functional, but also leave a small mark of creativity and care.</p>
+          </div>
+
+          <div class="icons-div">
+            <a href="#" class="icon flex-vc" target="_blank">
+              <img src="/images/linkedin-icon.svg" alt="Linked in icon" width="100%" height="auto">
+            </a>
+            <a href="#" class="icon flex-vc" target="_blank">
+              <img src="/images/github-icon.svg" alt="Linked in icon" width="100%" height="auto">
+            </a>
+            <a href="#" class="icon flex-vc" target="_blank">
+              <img src="/images/twitter-icon.svg" alt="Linked in icon" width="100%" height="auto">
+            </a>
+          </div>
+
+          <div class="copy-right-div">
+            <p>&copy; 2025 Vishal Verma. Crafted with curiosity and creativity.</p>
+          </div>
+        </div>
+
+        <div class="footer-right">
+
+          <div class="footer-links">
+            <h3>Links You might be searching</h3>
+            <ul>
+              <li><a href="#">Resume</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Works</a></li>
+            </ul>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="footer-slider flex-vc">
+        <div class="inner-content flex-vc">
+              <h3>YOUR VISION MY CODE</h3>
+              <div class="slider-icon">
+                <img src="/images/star.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+          </div>
+          <div class="inner-content flex-vc">
+              <h3>YOUR VISION MY CODE</h3>
+              <div class="slider-icon">
+                <img src="/images/star.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+          </div>
+          <div class="inner-content flex-vc">
+              <h3>YOUR VISION MY CODE</h3>
+              <div class="slider-icon">
+                <img src="/images/star.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+          </div>
+          <div class="inner-content flex-vc">
+              <h3>YOUR VISION MY CODE</h3>
+              <div class="slider-icon">
+                <img src="/images/star.svg" alt="A triangle" width="100%" height="auto">
+              </div>
+          </div>
+      </div>
+    </footer>
+    <!-- ========== End footer Section ========== -->
+    
+
+
 
     <script type="module" src="/src/main.js"></script>
   </body>
