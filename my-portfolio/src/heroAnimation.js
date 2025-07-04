@@ -43,8 +43,8 @@ export const heroAnimation = ()=> {
 
     gsap.from(".hero-para-container",{
         delay: 3,
-        duration: 2,
-        y: 100,
+        duration: 1,
+        y: 50,
         ease: "power3.in",
         opacity: 0,
     });

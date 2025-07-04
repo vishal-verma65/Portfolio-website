@@ -79,6 +79,7 @@ body {
   min-width: 320px;
   height: 100%;
   background-color: var(--primaryColor);
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -130,7 +131,10 @@ a {
 body::-webkit-scrollbar{
   display: none;
 }
-
+body::selection{
+  background-color: var(--textColor);
+  color: var(--secondaryColor);
+}
 
 /**layout**/
 .container{
@@ -138,7 +142,7 @@ body::-webkit-scrollbar{
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 /*grids*/
@@ -245,6 +249,7 @@ main{
   width: 100%;
   height: 111vh;
   position: relative;
+  overflow-y: hidden;
   z-index: 0;
   /* padding-top: 4vw; */
   /* background-color: #8a0505; */
@@ -500,9 +505,10 @@ main{
 
 /***** About Section styling *****/  
 .about-section{
-  height: 100vh;
+  height: 110vh;
+  overflow-y: hidden;
   padding: 0;
-  /* background-color: #a90a0a; */
+  /* background-color: #4f0aa9; */
 }
 .about-main-wrapper{
   height: 80%;
@@ -559,10 +565,33 @@ main{
     height: 9rem;
     gap: .5rem;
     /* background-color: #c50f0f; */
+
+    & img, h3{
+      transition: all .3s ease-in;
+      -webkit-transition: all .3s ease-in;
+      -moz-transition: all .3s ease-in;
+      -ms-transition: all .3s ease-in;
+      -o-transition: all .3s ease-in;
+    }
   }
   & h2{
     position: relative;
   }
+}
+.tech-stack{
+  margin-left: 5rem;
+}
+.logos img:hover{
+  filter: drop-shadow(8px 8px 20px var(--secondaryColor));
+  -webkit-filter: drop-shadow(8px 8px 20px var(--secondaryColor));
+}
+.logos h3:hover{
+  filter: drop-shadow(4px 4px 10px var(--mainColor));
+  -webkit-filter: drop-shadow(4px 4px 10px var(--mainColor));
+  border-bottom: 2px solid var(--mainColor);
+}
+.stack-tools-connecter:hover{
+  filter: drop-shadow(8px 8px 20px #e400ab);
 }
 .stack-tools-connecter{
   position: absolute;
@@ -570,8 +599,13 @@ main{
   right: -25%;
   width: 10rem;
   height: auto;
-  /* background-color: #fff; */
-  z-index: 10;
+  /*background-color: #fff;
+  */z-index: 10;
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
 }
 .right{
   bottom: -10%;
@@ -582,6 +616,12 @@ main{
   top: -15%;
   left: 10%;
   width: 5rem;
+}
+.stack-flower{
+  position: absolute;
+  top: -15%;
+  left: 0%;
+  width: 6rem;
 }
 .availability{
   margin-left: 30rem;
@@ -609,7 +649,25 @@ main{
   padding: .2rem 2rem;
   gap: .5rem;
   margin: 2.5rem 0;
+  transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  user-select: none;
 }
+ .contact-btn:hover{
+    animation: shake-btn 0.5s infinite;
+    -webkit-animation: shake-btn 0.5s infinite;
+    filter: drop-shadow(8px 8px 20px var(--secondaryColor));
+}
+  @keyframes shake-btn {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-2px, 2px); -webkit-transform: translate(-2px, 2px); -moz-transform: translate(-2px, 2px); -ms-transform: translate(-2px, 2px); -o-transform: translate(-2px, 2px); }
+    50%  { transform: translate(2px, 2px); }
+    75%  { transform: translate(-2px, 2px); }
+    100% { transform: translate(0, 0); }
+  }
 .dot{
   display: inline-block;
   width: .6rem;
@@ -626,6 +684,11 @@ main{
     position: absolute;
     left: -20%;
     bottom: -30%;
+
+    & img:hover{
+          filter: drop-shadow(4px 4px 30px var(--secondaryColor));
+          -webkit-filter: drop-shadow(4px 4px 30px var(--secondaryColor));
+}
 }
 /***** End About Section styling *****/
 
