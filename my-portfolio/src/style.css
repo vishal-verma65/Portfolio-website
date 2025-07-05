@@ -71,6 +71,7 @@
 html{
   font-size: 62.5%;
   color: var(--textColor);
+  scroll-behavior: smooth;
 }
 body {
   margin: 0 auto;
@@ -79,7 +80,6 @@ body {
   min-width: 320px;
   height: 100%;
   background-color: var(--primaryColor);
-  scroll-behavior: smooth;
 }
 
 h1,
@@ -701,6 +701,7 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   /* background-color: #b40d0d; */
 }
 .top-slider, .bottom-slider, .footer-slider{
@@ -775,6 +776,81 @@ main{
 }
 
 /***** End Section collaborate styling *****/
+
+/***** contact Section style *****/  
+.contact-section{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* background-color: #c10c0c; */
+}
+.contact-wrapper{
+  margin-top: 5rem;
+  align-items: start;
+  max-width: 40rem;
+  width: auto;
+  gap: 1rem;
+  padding: 1.5rem;
+  /* background-color: #119f09; */
+
+  & p{
+    text-align: left;
+    font-size: 1.6rem;
+    letter-spacing: -.01px;
+    /* background-color: #03a951; */
+  }
+}
+form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  & input, textarea{
+    background-color: transparent;
+    border: 1px solid var(--secondaryColor);
+    width: 100%;
+    padding: 1rem;
+  }
+  & textarea{
+    max-width: 100%;
+    max-height: 9rem;
+    
+  }
+  & label{
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  & button{
+    width: 50%;
+    height: auto;
+    padding: 1rem;
+    margin: 4rem auto 0 auto;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--secondaryColor);
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+}
+button:hover, input:hover, textarea:hover {
+  border-color: var(--mainColor);
+}
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--secondaryColor);
+  box-shadow: 2px 2px 10px var(--secondaryColor);
+}
+
+/***** End contact Section style *****/
+
 
 /***** Footer Section style *****/  
 .footer-section{

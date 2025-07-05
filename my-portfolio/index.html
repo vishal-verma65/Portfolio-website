@@ -14,19 +14,19 @@
       <div class="container">
         <nav class="navbar">
           <ul>
-            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
+            <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
           </ul>
 
           <div class="logo-container">
-            <a href="index.html">
+            <a href="#about">
               <img src="/images/logo.webp" alt="Logo name Vishal Verma" width="100%" height="auto">
             </a>
           </div>
 
           <ul>
-            <li class="nav-item"><a href="#" class="nav-link">WORKS</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+            <li class="nav-item"><a href="#work" class="nav-link">WORKS</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
           </ul>
         </nav>
       </div>
@@ -40,7 +40,7 @@
     <main>
 
       <!-- ========== Start Hero Section ========== -->
-      <section class="hero-section">
+      <section class="hero-section" id="home">
         <div class="container flex-col-c hero">
           <div class="hero-heading ">
             
@@ -97,7 +97,7 @@
       </section>
       <!-- ========== End Hero Section ========== -->
       
-      <section class="about-section container flex-vc">
+      <section class="about-section container flex-vc" id="about">
         <div class="about-main-wrapper flex-vc">
           
           <div class="about-me flex-direction-col-c">
@@ -181,7 +181,7 @@
             <h3>I am flexible with communications, time zone and locations</h3>
             <p class="about-common-para">I'm based in Uttrakhand, India and open to remote work worldwide.</p>
             
-            <a class="contact-btn flex-center" href="contact.html" target="_blank"><span class="dot"></span> Contact Me</a>
+            <a class="contact-btn flex-center" href="#contact"><span class="dot"></span> Contact Me</a>
           </div>
         </div>
       </section>
@@ -353,6 +353,28 @@
 
       </section >
       <!-- ========== End About Section ========== -->
+
+      <!-- ========== Start Contact me Section ========== -->
+      <section class="contact-section container flex-center" id="contact">
+        <div class="contact-wrapper flex-direction-col-c">
+          <h2>Let's talk</h2>
+          <p>Feel free to reach out for collaborations or just a friendly hello 👋</p>
+          <form action="">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="ex.,Vishal Verma" required autocomplete="off">
+
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="ex.,vishalVerma@gmail.com" required autocomplete="off">
+
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" placeholder="Hello..." autocomplete="off"></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+      <!-- ========== End Contact me Section ========== -->
+      
     
     </main>
     <!-- ========== End main Section ========== -->
@@ -382,10 +404,10 @@
           </div>
 
           <div class="icons-div">
-            <a href="#" class="icon flex-vc" target="_blank">
+            <a href="https://www.linkedin.com/in/vishal-verma-62494635a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " class="icon flex-vc" target="_blank">
               <img src="/images/linkedin-icon.svg" alt="Linked in icon" width="100%" height="auto">
             </a>
-            <a href="#" class="icon flex-vc" target="_blank">
+            <a href="https://github.com/vishal-verma65" class="icon flex-vc" target="_blank">
               <img src="/images/github-icon.svg" alt="Linked in icon" width="100%" height="auto">
             </a>
             <a href="#" class="icon flex-vc" target="_blank">
@@ -403,9 +425,9 @@
           <div class="footer-links">
             <h3>Links You might be searching</h3>
             <ul>
-              <li><a href="#">Resume</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Works</a></li>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#work">Works</a></li>
             </ul>
           </div>
         </div>
