@@ -97,6 +97,7 @@
       </section>
       <!-- ========== End Hero Section ========== -->
       
+      <!-- ========== Start about Section ========== -->
       <section class="about-section container flex-vc" id="about">
         <div class="about-main-wrapper flex-vc">
           
@@ -185,8 +186,41 @@
           </div>
         </div>
       </section>
+      <!-- ========== End about Section ========== -->
 
-      <!-- ========== Start About Section ========== -->
+      <!-- ========== Start Projects Section ========== -->
+      <section class="project-section container" id="work">
+        <div class="project-wrapper">
+          <h2>Projects</h2>
+          <div id="project-container"></div>
+        </div>
+      </section>
+
+      <!-- ========== Start Project template  ========== -->
+      <template id="projectTemplate">
+        <article class="project flex-vc" id="projectId">
+          <div class="leftPart">
+                        <h3 class="projectTitle">Ecommerce website</h3>
+                        <p class="techUsed">HTML CSS JavaScript GSAP</p>
+          </div>
+          <div class="rightPart flex-vc">
+            <a href="#" class="project-view flex-vc" target="_blank">View 
+              <span>
+                <img src="/images/side-arrow.svg" alt="Link arrow" width="100%" height="auto">
+              </span>
+            </a>
+            <a href="https://github.com/vishal-verma65" class="project-git-icon flex-vc" target="_blank">
+              <img src="/images/github-icon.svg" alt="Linked in icon" width="100%" height="auto">
+            </a>
+          </div>
+        </article>
+      </template>
+      <!-- ========== End Project template  ========== -->
+      
+      <!-- ========== End Projects Section ========== -->
+      
+
+      <!-- ========== Start collaboration Section ========== -->
       <section class="collaborate-section container flex-center">
         <div class="top-slider flex-vc">
             
@@ -352,7 +386,7 @@
         </div>
 
       </section >
-      <!-- ========== End About Section ========== -->
+      <!-- ========== End collaboration Section ========== -->
 
       <!-- ========== Start Contact me Section ========== -->
       <section class="contact-section container flex-center" id="contact">
@@ -396,7 +430,7 @@
             <div class="mail-icon flex-vc">
               <img src="/images/mail-icon.svg" alt="mail icon" width="100%" height="auto">
             </div>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sayhello.vishalverma@gmail.com" target="_blank">sayhello.vishalverma@gmail.com</a>
+            <a class="mail-id" href="https://mail.google.com/mail/?view=cm&fs=1&to=sayhello.vishalverma@gmail.com" target="_blank">sayhello.vishalverma@gmail.com</a>
           </div>
 
           <div class="footer-para-div">
@@ -425,9 +459,12 @@
           <div class="footer-links">
             <h3>Links You might be searching</h3>
             <ul>
-              <li><a href="#resume">Resume</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#work">Works</a></li>
+              <li>
+                <a href="#" class="resume">View Resume</a>
+              </li>
+              <li>
+                <a href="#" class="resume">Download Resume</a>
+              </li>
             </ul>
           </div>
         </div>

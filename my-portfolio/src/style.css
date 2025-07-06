@@ -135,6 +135,16 @@ body::selection{
   background-color: var(--textColor);
   color: var(--secondaryColor);
 }
+.contact-btn:focus-visible, 
+.project-view:focus-visible,
+.project-git-icon:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  border: 1px solid var(--secondaryColor);
+  outline: 2px solid var(--secondaryColor);
+  box-shadow: 2px 2px 10px var(--secondaryColor);
+}
 
 /**layout**/
 .container{
@@ -693,6 +703,97 @@ main{
 /***** End About Section styling *****/
 
 
+/***** Project Section styling *****/  
+.project-section{
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  overflow: hidden;
+  /* background-color: #c00b0b; */
+}
+.project-wrapper{
+  text-align: left;
+  width: 100%;
+  padding: 2rem;
+  gap: 1rem;
+  /* background-color: #6e27b9; */
+
+  & h2{
+    font-size: 5rem;
+    letter-spacing: .1px;
+    text-transform: uppercase;
+    padding: 2rem .5rem;
+  }
+}
+#project-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* background-color: #49a10e; */
+}
+.project{
+  /* background-color: #e615bc; */
+  padding: .5rem;
+  justify-content: space-between;
+
+  & .leftPart{
+    height: 100%;
+    width: 100%;
+    padding: .5rem;
+    /* background-color: #cfc214; */
+
+    & .projectTitle{
+      font-size: 2.5rem;
+      border-bottom: 1px solid var(--greyColor);
+    }
+    & .techUsed{
+      font-size: 1.3rem;
+      font-weight:600;
+      letter-spacing: .1px;
+      text-transform: uppercase;
+      word-spacing: 1rem;
+    }
+  }
+  & .rightPart{
+    height: 100%;
+    width: fit-content;
+    padding: .5rem;
+    gap: 1rem;
+    /* background-color: #cfc214; */
+
+    & .project-view{
+      border: 1px solid var(--secondaryColor);
+      align-items: center;
+      /* background-color: #0ebac6; */
+      font-size: 1.5rem;
+      padding: .2rem 1rem;
+      gap: .2rem;
+      border-radius: 1rem;
+      -webkit-border-radius: 1rem;
+      -moz-border-radius: 1rem;
+      -ms-border-radius: 1rem;
+      -o-border-radius: 1rem;
+
+      & img{
+        width: 1.3rem;
+        height: auto;
+      }
+    }
+    & .project-git-icon{
+      width: 3rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+}
+  }
+}
+/***** End Project Section styling *****/
+
+
 /***** Section collaborate styling *****/  
 .collaborate-section{
   width: 100%;
@@ -836,17 +937,19 @@ form{
     background-color: transparent;
     border: 1px solid var(--secondaryColor);
     cursor: pointer;
-    transition: border-color 0.25s;
-  }
+    transition: all .3s linear  ;
+    -webkit-transition: all .3s linear  ;
+    -moz-transition: all .3s linear  ;
+    -ms-transition: all .3s linear  ;
+    -o-transition: all .3s linear  ;
 }
-button:hover, input:hover, textarea:hover {
+}
+button:hover{
+      background-color: var(--secondaryColor);
+      border: none;
+    }
+input:hover, textarea:hover {
   border-color: var(--mainColor);
-}
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid var(--secondaryColor);
-  box-shadow: 2px 2px 10px var(--secondaryColor);
 }
 
 /***** End contact Section style *****/
@@ -941,7 +1044,12 @@ textarea:focus-visible {
   & .icon{
     width: 3rem;
     height: auto;
-  }
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
 }  
 .footer-right{
   width: 40%;
@@ -952,9 +1060,26 @@ textarea:focus-visible {
   }
   & li{
     line-height: 1.1;
+    padding: 1rem;
   }
   & a{
+    border: 1px solid var(--textColor);
+    padding: .5rem 1rem;
     font-size: 1.4rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+
+    &:hover{
+      background-color: var(--textColor);
+    }
   }
 }
 .copy-right-div{
@@ -973,6 +1098,13 @@ textarea:focus-visible {
   & .slider-icon{
     width: 4rem;
   }
+}
+.mail-id:focus-visible,
+.icons-div a:focus-visible,
+.resume:focus-visible{
+  border: 1px solid var(--textColor);
+  outline: 2px solid var(--textColor);
+  box-shadow: 2px 2px 10px var(--textColor);
 }
 /***** End Footer Section style *****/
 
