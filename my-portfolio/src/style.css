@@ -788,8 +788,11 @@ main{
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
-}
+    }
   }
+}
+.project:hover{
+  box-shadow: 4px 4px 10px var(--secondaryColor);
 }
 /***** End Project Section styling *****/
 

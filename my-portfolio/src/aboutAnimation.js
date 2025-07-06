@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const aboutAnimation = ()=>{
 
     gsap.to(".about-section .about-main-wrapper",{
-        transform: "translate(-73%)",
+        transform: "translate(-72.5%)",
         scrollTrigger: {
             trigger: ".about-section",
             scroller: "body",

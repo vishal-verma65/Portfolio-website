@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "We Store E-commerce Website",
+        "techUsed": "Html Css JavaScript",
+        "viewLink": "https://weecomstore.netlify.app/",
+        "repoLink": "https://github.com/vishal-verma65/Ecommerce-website",
+        "landingPageImg": "/images/weStore.webp"
+    },
+    {
+        "id": 1,
+        "title": "My Portfolio Website",
+        "techUsed": "Html Css JavaScript Gsap",
+        "viewLink": "#",
+        "repoLink": "#",
+        "landingPageImg": "/images/portfolio.webp"
+    }
+]
