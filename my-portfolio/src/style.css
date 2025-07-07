@@ -51,6 +51,14 @@
   :root {
     --primaryColor: #F5F5F5;
     --textColor: #071E22;
+
+    .ball{
+      transform: translateY(160%);
+      -webkit-transform: translateY(160%);
+      -moz-transform: translateY(160%);
+      -ms-transform: translateY(160%);
+      -o-transform: translateY(160%);
+    }
   }
 }
 
@@ -502,7 +510,7 @@ main{
 /***** Theme toggle style *****/  
 .theme-toggle-container{
   position: fixed;
-  left: 0;
+  left: .3%;
   top: 50%;
   background-color: var(--primaryColor);
   border: 1px solid var(--mainColor);
@@ -517,23 +525,22 @@ main{
   user-select: none;
   cursor: pointer;
   z-index: 99;
+  padding: .5rem .2rem .3rem .2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.sun{
-  /* background-color: #fff; */
+.sun, .moon{
   width: 100%;
-  height: 50%;
-}
-.moon{
-  /* background-color: #a53434; */
-  width: 100%;
-  height: 50%;
+  height: auto;
 }
 .ball{
+  /* display: none; */
   width: 1.6rem;
   height: 1.6rem;
   background-color: var(--mainColor);
   position: absolute;
-  bottom: 3%;
+  bottom: 60%;
   left: 8%;
   border-radius: 50%;
   -webkit-border-radius: 50%;

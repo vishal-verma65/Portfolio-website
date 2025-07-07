@@ -29,10 +29,25 @@ export const otherAnimation = ()=>{
         }
     });
 
+
     //theme toggler
-    let toggle = 0;
+    function toggleValue(){
+        const element = document.querySelector(".menu-btn")
+        const value = getComputedStyle(element).getPropertyValue('--textColor').trim();
+
+        let val;
+
+        if(value === "#d9d9d9"){
+            return val = 0;
+        }
+        else{
+            return val = 1;
+        }
+    }
+
+    let toggle = toggleValue();
     document.querySelector(".theme-toggle-container").addEventListener("click", ()=>{
-        toggle == 0 ? toggle = 1 : toggle = 0;
+        // console.log(toggle);
 
         if(toggle == 0){
             document.documentElement.style.setProperty("--primaryColor", "#F5F5F5");
@@ -43,6 +58,12 @@ export const otherAnimation = ()=>{
             document.querySelector(".scroll-img").setAttribute("src", "/images/theme-circle.webp");
             document.querySelector("#down-arrow").setAttribute("src", "/images/theme-down-arrow.svg");
             document.querySelector(".github-icon").setAttribute("src", "/images/theme-github-icon.svg");
+
+            gsap.to(".ball",{
+                transform: "translateY(166%)",
+                duration: .3,
+                ease: "bounce.out",
+            });
         }
         else{
             document.documentElement.style.setProperty("--primaryColor", "#071E22");
@@ -53,8 +74,20 @@ export const otherAnimation = ()=>{
             document.querySelector(".scroll-img").setAttribute("src", "/images/scroll-down-circle.webp");
             document.querySelector("#down-arrow").setAttribute("src", "/images/down-arrow.svg");
             document.querySelector(".github-icon").setAttribute("src", "/images/github-icon.svg");
+
+            gsap.to(".ball",{
+                transform: "translateY(-0%)",
+                duration: .3,
+                ease: "bounce.out",
+            });
         }
+
+        toggle == 0 ? toggle = 1 : toggle = 0;
+        // console.log(toggle);
+
     });
+
+};
 
     // ScrollTrigger.create({
     //     trigger: ".contact-section",
@@ -78,4 +111,3 @@ export const otherAnimation = ()=>{
     //     });
 
 
-};
