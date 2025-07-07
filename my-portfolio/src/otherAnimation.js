@@ -28,17 +28,33 @@ export const otherAnimation = ()=>{
             scrub: true,
         }
     });
-    
 
-    // gsap.to(".navbar",{
-    //     backgroundColor: "transparent",
-    //     y: -100, 
-    //     opacity: 0,
-    //     duration: 0.5,
-    //     scrollTrigger:{
-    //         trigger:".collaborate-section",
+    //theme toggler
+    let toggle = 0;
+    document.querySelector(".theme-toggle-container").addEventListener("click", ()=>{
+        toggle == 0 ? toggle = 1 : toggle = 0;
 
-    // })
+        if(toggle == 0){
+            document.documentElement.style.setProperty("--primaryColor", "#F5F5F5");
+            document.documentElement.style.setProperty("--textColor", "#071e22");
+
+            document.querySelector("#logo-img").setAttribute("src", "/images/theme-logo.webp");
+            document.querySelector("#bg-flower").setAttribute("src", "/images/theme-flower.webp");
+            document.querySelector(".scroll-img").setAttribute("src", "/images/theme-circle.webp");
+            document.querySelector("#down-arrow").setAttribute("src", "/images/theme-down-arrow.svg");
+            document.querySelector(".github-icon").setAttribute("src", "/images/theme-github-icon.svg");
+        }
+        else{
+            document.documentElement.style.setProperty("--primaryColor", "#071E22");
+            document.documentElement.style.setProperty("--textColor", "#d9d9d9");
+
+            document.querySelector("#logo-img").setAttribute("src", "/images/logo.webp");
+            document.querySelector("#bg-flower").setAttribute("src", "/images/hero-flower.webp");
+            document.querySelector(".scroll-img").setAttribute("src", "/images/scroll-down-circle.webp");
+            document.querySelector("#down-arrow").setAttribute("src", "/images/down-arrow.svg");
+            document.querySelector(".github-icon").setAttribute("src", "/images/github-icon.svg");
+        }
+    });
 
     // ScrollTrigger.create({
     //     trigger: ".contact-section",
