@@ -9,8 +9,8 @@ export const aboutAnimation = ()=>{
         scrollTrigger: {
             trigger: ".about-section",
             scroller: "body",
-            start: "top 0%",
-            end: "top -500%",
+            start: "top top",
+            end: "+=500%",
             scrub: 2,
             pin: true,
         }

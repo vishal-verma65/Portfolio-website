@@ -11,7 +11,7 @@
    
     <!-- ========== Start Navbar Section ========== -->
     <header class="navbar-section">
-      <div class="container">
+      <div class="container primary-nav">
         <nav class="navbar">
           <ul>
             <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
@@ -28,6 +28,25 @@
             <li class="nav-item"><a href="#work" class="nav-link">WORKS</a></li>
             <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
           </ul>
+        </nav>
+      </div>
+
+      <div class="container secondary-nav">
+        <nav class="navbar">
+
+          <div class="logo-container">
+            <a href="#about">
+              <img src="/images/logo.webp" alt="Logo name Vishal Verma" width="100%" height="auto">
+            </a>
+          </div>
+
+          <button class="menu-btn flex-vc">
+            MENU
+            <span>
+              <img src="/images/menu-icon.svg" alt="menu icon">
+            </span>
+          </button>
+
         </nav>
       </div>
 
@@ -74,8 +93,20 @@
                 <span class="hero-para-text">"Showcasing what I love to do"</span>
               </span> }</p>
           </div>
-          
-          <!-- scroll to explore more circle -->
+
+        </div>
+      </section>
+      <!-- ========== End Hero Section ========== -->
+
+
+      <!-- theme toggler  -->
+          <div class="theme-toggle-container flex-column">
+            <div class="sun"></div>
+            <div class="moon"></div>
+            <div class="ball"></div>
+          </div>
+
+      <!-- scroll to explore more circle -->
           <div class="scroll-circle">
             <img class="scroll-img" src="/images/scroll-down-circle.webp" alt="Scroll to explore in a circle">
             <div class="circle">
@@ -84,18 +115,8 @@
             </div>
               <div class="inner-circle"></div>
             </div> 
-          </div>
+          </div>    
 
-          <!-- theme toggler  -->
-          <div class="theme-toggle-container flex-column">
-            <div class="sun"></div>
-            <div class="moon"></div>
-            <div class="ball"></div>
-          </div>
-
-        </div>
-      </section>
-      <!-- ========== End Hero Section ========== -->
       
       <!-- ========== Start about Section ========== -->
       <section class="about-section container flex-vc" id="about">

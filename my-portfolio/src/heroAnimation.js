@@ -1,35 +1,11 @@
 import { gsap } from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { SplitText } from "gsap/SplitText";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrambleTextPlugin, SplitText, ScrollTrigger);
+gsap.registerPlugin(ScrambleTextPlugin, SplitText);
 
 
 
 export const heroAnimation = ()=> {
-
-    ScrollTrigger.create({
-        trigger: ".collaborate-section",
-        start: "top top",  
-        onEnter: () => {
-            gsap.to(".navbar-section", {
-                backgroundColor: "transparent",
-                y: -100, 
-                opacity: 0,
-                duration: 0.5,
-            });
-        },
-        onLeaveBack: () => {
-            gsap.to(".navbar-section", {
-                backgroundColor: "#071E22",
-                y: 0, 
-                opacity: 1,
-                duration: 0.5,
-            });
-        }
-        });
-
-
 
     gsap.to(".hii-para",{
         duration: 2,
@@ -49,25 +25,10 @@ export const heroAnimation = ()=> {
         opacity: 0,
     });
 
-
-    let rotation = 0;
-    window.addEventListener("wheel", (event)=>{
-        const direction = event.deltaY > 0 ? 1 : -1;
-
-        rotation += 5 * direction;
-
-        gsap.to(".scroll-img",{
-            rotation: rotation,
-            duration: 1,
-            ease: "power3.out",
-        });
-    });
-
-
     const tl = gsap.timeline();
     let split  = SplitText.create(".line", {type: "chars"});
-    console.log(split);
-    console.log(split.chars[0].textContent);
+    // console.log(split);
+    // console.log(split.chars[0].textContent);
 
     tl.from(split.chars[0], {
         rotateX: -180,
@@ -204,97 +165,4 @@ export const heroAnimation = ()=> {
         repeat: -1,
     },5)
 
-   
-
-    
-
-
-    // //developer changing animation
-    //     .from(split.chars[11], {
-    //         ease: "power2.inOut",
-    //     scrambleText: {
-    //         text: "s",
-    //         chars: " ",
-    //         // autoAlpha: 1,
-    //     }})
-    //     .from(split.chars[12], {
-    //         ease: "power2.inOut",
-    //     scrambleText: {
-    //         text: "i",
-    //         chars: " ",
-    //         // autoAlpha: 1,
-    //     }})
-    //     .from(split.chars[13], {
-    //         ease: "power2.inOut",
-    //     scrambleText: {
-    //         text: "g",
-    //         chars: " ",
-    //         // autoAlpha: 1,
-    //     }},5)
-    //     .from(split.chars[14], {
-    //         ease: "power2.inOut",
-    //     scrambleText: {
-    //         text: "n",
-    //         chars: " ",
-    //         // autoAlpha: 1,
-    //     }})
-    //     .from(split.chars[15], {
-    //         ease: "power2.inOut",
-    //     scrambleText: {
-    //         text: "e",
-    //         chars: " ",
-    //         // autoAlpha: 1,
-    //     }},5)
-    //     .from(split.chars[16], {
-    //         ease: "power2.inOut",
-    //     scrambleText: {
-    //         text: "r",
-    //         chars: " ",
-    //         // autoAlpha: 1,
-    //     }})
-    //     .from(split.chars[17], {
-    //         ease: "power2.inOut",
-    //     scrambleText: {
-    //         text: ".",
-    //         chars: " ",
-    //         // autoAlpha: 1,
-    //     }})
-
 };
-
-// //*using SplitText 
-// let split = SplitText.create(".split", {type: "chars"});
-
-// gsap.from(split.chars,{
-//     duration: 1,
-//     y: 100,
-//     autoAlpha: 0,
-//     stagger: .05,
-
-// });
-
-// SplitText.create(".split", {
-//   type: "chars",
-//   autoSplit: true,
-//   onSplit(self) {
-//     return gsap.from(self.chars, {
-//       duration: 1, 
-//       y: 100, 
-//       autoAlpha: 0, 
-//       stagger: 0.05
-//     });
-//   }
-// });
-
-
-// gsap.to(".scrambleText2",{
-//     duration: 1,
-//     scrambleText: {
-//         text: "Hello, I am a Developer.",
-//         chars: "XO",
-//         // revealDelay: .5,
-//         speed: .3,
-//         newClass: "myClass",
-//     }   
-// });
-//
