@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrambleTextPlugin, SplitText);
 
 export const heroAnimation = ()=> {
 
+    //animation of hii para in the hero section
     gsap.to(".hii-para",{
         duration: 2,
         ease: "none",
@@ -17,6 +18,7 @@ export const heroAnimation = ()=> {
         }
     });
 
+    //animation of the hero para in hero section
     gsap.from(".hero-para-container",{
         delay: 3,
         duration: 1,
@@ -25,11 +27,11 @@ export const heroAnimation = ()=> {
         opacity: 0,
     });
 
+    //timeline animation of the word frontend developer
     const tl = gsap.timeline();
     let split  = SplitText.create(".line", {type: "chars"});
-    // console.log(split);
-    // console.log(split.chars[0].textContent);
 
+    //front end word animation
     tl.from(split.chars[0], {
         rotateX: -180,
         rotateZ: 0,
@@ -81,7 +83,7 @@ export const heroAnimation = ()=> {
         ease: "bounce.out"    
     })
 
-    //developer animation
+    //developer word animation
     .from(split.chars[9], {
         duration: .8,
         y: 100,

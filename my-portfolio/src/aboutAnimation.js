@@ -4,6 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const aboutAnimation = ()=>{
 
+    //pinning the about main wrapper 
     gsap.to(".about-section .about-main-wrapper",{
         transform: "translate(-72.5%)",
         scrollTrigger: {
@@ -16,6 +17,7 @@ export const aboutAnimation = ()=>{
         }
     });
 
+    //about section flower rotating animation
     gsap.to(".about-flower img",{
         rotate: 360, 
         scrollTrigger: {
@@ -26,6 +28,7 @@ export const aboutAnimation = ()=>{
         }
     });
 
+    //rotating animation of the flower above the tech stack heading 
     gsap.from(".tech-stack-flower img", {
         rotate: 360, 
         x: -900,
@@ -38,6 +41,7 @@ export const aboutAnimation = ()=>{
         }
     });
     
+    //rotating animation of the shape above the tech stack heading 
     gsap.to(".stack-flower img", {
         rotate: "360", 
         x: 920,
@@ -48,9 +52,10 @@ export const aboutAnimation = ()=>{
             scrub: 3,
             start: "top top",
             end: "300%",
-            }
-        }); 
+        }
+    }); 
         
+    //animation of the earth clip
     gsap.from(".earth-clip img", {
         rotate: "360", 
         x: -950,
