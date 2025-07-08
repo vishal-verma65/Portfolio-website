@@ -30,11 +30,13 @@ export const otherAnimation = ()=>{
     });
 
 
-    //theme toggler
-    function toggleValue(){
-        const element = document.querySelector(".menu-btn")
-        const value = getComputedStyle(element).getPropertyValue('--textColor').trim();
+    //theme toggle functionality
+    const element = document.querySelector(".menu-btn")
 
+    //function to get value of toggle according to the default text color 
+    function toggleValue(){
+        const value = getComputedStyle(element).getPropertyValue('--textColor').trim();
+    
         let val;
 
         if(value === "#d9d9d9"){
@@ -45,12 +47,9 @@ export const otherAnimation = ()=>{
         }
     }
 
-    let toggle = toggleValue();
-    document.querySelector(".theme-toggle-container").addEventListener("click", ()=>{
-        // console.log(toggle);
-
-        if(toggle == 0){
-            document.documentElement.style.setProperty("--primaryColor", "#F5F5F5");
+    //light theme modification
+    function lightTheme(){
+        document.documentElement.style.setProperty("--primaryColor", "#F5F5F5");
             document.documentElement.style.setProperty("--textColor", "#071e22");
 
             document.querySelector("#logo-img").setAttribute("src", "/images/theme-logo.webp");
@@ -64,9 +63,10 @@ export const otherAnimation = ()=>{
                 duration: .3,
                 ease: "bounce.out",
             });
-        }
-        else{
-            document.documentElement.style.setProperty("--primaryColor", "#071E22");
+    }
+    //dark theme modification
+    function darkTheme(){
+        document.documentElement.style.setProperty("--primaryColor", "#071E22");
             document.documentElement.style.setProperty("--textColor", "#d9d9d9");
 
             document.querySelector("#logo-img").setAttribute("src", "/images/logo.webp");
@@ -80,34 +80,36 @@ export const otherAnimation = ()=>{
                 duration: .3,
                 ease: "bounce.out",
             });
+    }
+
+    //getting data from the local storage of preferred theme and applying the modifications accordingly 
+    const theme = localStorage.getItem("preferredTheme");
+    if(theme === "#d9d9d9"){
+        lightTheme();
+    }
+    else{
+        darkTheme();
+    }
+
+    //theme toggling when the theme toggle button is clicked
+    let toggle = toggleValue();
+    document.querySelector(".theme-toggle-container").addEventListener("click", ()=>{
+
+        const value = getComputedStyle(element).getPropertyValue('--textColor').trim();
+        localStorage.setItem("preferredTheme", value );
+        
+        if(toggle == 0){
+            lightTheme();
+        }
+        else{
+            darkTheme();
         }
 
+        //toggling the value of toggle from 1 to 0 or 0 to 1
         toggle == 0 ? toggle = 1 : toggle = 0;
-        // console.log(toggle);
 
     });
 
 };
-
-    // ScrollTrigger.create({
-    //     trigger: ".contact-section",
-    //     start: "top top",  
-    //     onEnter: () => {
-    //         gsap.to(".navbar-section", {
-    //             backgroundColor: "transparent",
-    //             y: -100, 
-    //             opacity: 0,
-    //             duration: 0.5,
-    //         });
-    //     },
-    //     onLeaveBack: () => {
-    //         gsap.to(".navbar-section", {
-    //             backgroundColor: "#071E22",
-    //             y: 0, 
-    //             opacity: 1,
-    //             duration: 0.5,
-    //         });
-    //     }
-    //     });
 
 

@@ -7,7 +7,7 @@ import { projectAnimation } from "./projectAnimation";
 import { otherAnimation } from "./otherAnimation";
 
 
-console.log(projects);
+// console.log(projects);
 
 otherAnimation();
 heroAnimation();
