@@ -5,14 +5,18 @@
         "techUsed": "Html Css JavaScript",
         "viewLink": "https://weecomstore.netlify.app/",
         "repoLink": "https://github.com/vishal-verma65/Ecommerce-website",
-        "landingPageImg": "/images/weStore.webp"
+        "landingPageImg": "/images/weStore.webp",
+        "description": "We Store is a frontend e-commerce website built with HTML, CSS, and JavaScript. It features a clean UI, product catalog, product cart and interactive elements designed for showcasing web development skills.",
+        "category": "Frontend"
     },
     {
-        "id": 1,
+        "id": 2,
         "title": "My Portfolio Website",
         "techUsed": "Html Css JavaScript Gsap",
-        "viewLink": "#",
-        "repoLink": "#",
-        "landingPageImg": "/images/portfolio.webp"
+        "viewLink": "index.html",
+        "repoLink": "https://github.com/vishal-verma65/Portfolio-website",
+        "landingPageImg": "/images/portfolio.webp",
+        "description": "A clean and responsive portfolio website built with HTML, CSS, and JavaScript. Animations are powered by GSAP for smooth transitions and effects. Developed using Vite for fast performance and modern build setup.",
+        "category": "Frontend"
     }
 ]

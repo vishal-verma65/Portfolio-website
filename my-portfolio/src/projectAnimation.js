@@ -32,4 +32,52 @@ export const projectAnimation = ()=>{
             end: "top 60%",
         }
     }) 
+// const floatingImg = document.querySelector(".main-floating .projectImg");
+// //  console.log(floatingImg.getAttribute("src"));
+// const floatingCategory = document.querySelector(".main-floating .category");
+// const floatingDesc = document.querySelector(".main-floating .desc");
+
+// const projects = document.querySelectorAll(".project");
+// // console.log(projects);
+// projects.forEach(project => {
+//     // console.log(project);
+//     const floatingDiv = project.querySelector(".floatingDiv");
+
+//     project.addEventListener("mouseenter", (e) => {
+//         floatingDiv.style.display = "block";
+
+//         const imageSrc = document.querySelector(".floatingDiv .projectImg")
+//         const category = document.querySelector(".floatingDiv .category")
+//         const desc = document.querySelector(".floatingDiv .desc")
+
+//         const img = imageSrc.getAttribute("src");
+//         floatingImg.setAttribute("src", img);
+//         floatingCategory.textContent = category.textContent;
+//         floatingDesc.textContent = desc.textContent;
+
+//         console.log(img);
+//         // console.log(imageSrc.getAttribute("src"));
+//         // console.log(category.textContent);
+//         // console.log(desc.textContent);
+//     });
+
+//     project.addEventListener("mousemove", (e) => {
+//         const rect = project.getBoundingClientRect();
+//         const x = e.clientX - rect.left;
+//         const y = e.clientY - rect.top;
+
+//         gsap.to(floatingDiv, {
+//         left: x,
+//         top: y,
+//         duration: 0.5,
+//         ease: "power3.out",
+//         });
+//     });
+
+//     project.addEventListener("mouseleave", () => {
+//         floatingDiv.style.display = "none";
+//     });
+// });
+
+        
 };

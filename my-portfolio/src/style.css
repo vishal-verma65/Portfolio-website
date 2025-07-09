@@ -343,6 +343,7 @@ main{
     -moz-transform: translateY(-14%);
     -ms-transform: translateY(-14%);
     -o-transform: translateY(-14%);
+    /* color: var(--mainColor); */
       
     & span{
       display: inline-block;
@@ -403,7 +404,7 @@ main{
   position: absolute;
   width: 65rem;
   height: auto;
-  padding: 0 9rem 5.5rem 5rem;
+  padding: 0 7.3rem 5.5rem 5rem;
   /* background-color: #940f7a; */
   transform: translate(-50% -50%);
   -webkit-transform: translate(-50% -50%);
@@ -693,7 +694,7 @@ main{
   width: 6rem;
 }
 .availability{
-  margin-left: 30rem;
+  margin-left: 38rem;
   padding-bottom: 1rem;
   & h3{
     font-size: 2rem;
@@ -767,7 +768,8 @@ main{
   width: 100%;
   height: auto;
   padding: 2rem;
-  overflow: hidden;
+  padding-bottom: 8rem;
+  overflow: visible;
   /* background-color: #c00b0b; */
 }
 .project-wrapper{
@@ -781,7 +783,7 @@ main{
     font-size: 5rem;
     letter-spacing: .1px;
     text-transform: uppercase;
-    padding: 2rem .5rem;
+    padding: 3rem .5rem;
   }
 }
 #project-container{
@@ -790,10 +792,12 @@ main{
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
   /* background-color: #49a10e; */
 }
 .project{
   /* background-color: #e615bc; */
+  z-index: 1;
   padding: .5rem;
   justify-content: space-between;
 
@@ -853,6 +857,57 @@ main{
 .project:hover{
   box-shadow: 4px 4px 10px var(--secondaryColor);
 }
+.floatingDiv{
+  position: absolute;
+  top: -50%;
+  width: 40rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .5rem;
+  color: var(--primaryColor);
+  background-color: var(--mainColor);
+  border-radius: 1rem;
+  z-index: 999;
+  pointer-events: none;
+  display: none;
+}
+.imgContainer, .floatingDiv-content{
+  width: 100%;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.category{
+  background-color: var(--mainColor);color: var(--primaryColor);
+  padding: .2rem .8rem;
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  border-radius: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.desc{
+  padding: .5rem;
+  text-align: left;
+  font-size: 1.5rem;
+  letter-spacing: .1px;
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 10000;
+}
+
+.main-floating{
+  display: block;
+}
+
 /***** End Project Section styling *****/
 
 
