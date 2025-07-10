@@ -32,52 +32,53 @@ export const projectAnimation = ()=>{
             end: "top 60%",
         }
     }) 
-// const floatingImg = document.querySelector(".main-floating .projectImg");
-// //  console.log(floatingImg.getAttribute("src"));
-// const floatingCategory = document.querySelector(".main-floating .category");
-// const floatingDesc = document.querySelector(".main-floating .desc");
 
-// const projects = document.querySelectorAll(".project");
-// // console.log(projects);
-// projects.forEach(project => {
-//     // console.log(project);
-//     const floatingDiv = project.querySelector(".floatingDiv");
+const projects = document.querySelectorAll(".project");
 
-//     project.addEventListener("mouseenter", (e) => {
-//         floatingDiv.style.display = "block";
+projects.forEach(project => {
+    const floatingDiv = project.querySelector(".floatingDiv");
 
-//         const imageSrc = document.querySelector(".floatingDiv .projectImg")
-//         const category = document.querySelector(".floatingDiv .category")
-//         const desc = document.querySelector(".floatingDiv .desc")
+    //setting up the style property of the div to display block and adding the content to it when the mouse enters the particular project
+    project.addEventListener("mouseenter", () => {
 
-//         const img = imageSrc.getAttribute("src");
-//         floatingImg.setAttribute("src", img);
-//         floatingCategory.textContent = category.textContent;
-//         floatingDesc.textContent = desc.textContent;
+        document.querySelector(".floating-div").style.display = "block";
 
-//         console.log(img);
-//         // console.log(imageSrc.getAttribute("src"));
-//         // console.log(category.textContent);
-//         // console.log(desc.textContent);
-//     });
+        const floatingImg = document.querySelector(".floating-div .project-img");
+        const floatingCategory = document.querySelector(".floating-div .floating-category");
+        const floatingDesc = document.querySelector(".floating-div .floating-desc");
 
-//     project.addEventListener("mousemove", (e) => {
-//         const rect = project.getBoundingClientRect();
-//         const x = e.clientX - rect.left;
-//         const y = e.clientY - rect.top;
+        const imageSrc = project.querySelector(".floatingDiv .projectImg")
+        const category = project.querySelector(".floatingDiv .category")
+        const desc = project.querySelector(".floatingDiv .desc")
 
-//         gsap.to(floatingDiv, {
-//         left: x,
-//         top: y,
-//         duration: 0.5,
-//         ease: "power3.out",
-//         });
-//     });
+        const img = imageSrc.getAttribute("src");
+        floatingImg.setAttribute("src", img);
+        floatingCategory.textContent = category.textContent;
+        floatingDesc.textContent = desc.textContent;
 
-//     project.addEventListener("mouseleave", () => {
-//         floatingDiv.style.display = "none";
-//     });
-// });
+    });
+
+    //making the div to follow the cursor movement 
+    project.addEventListener("mousemove", (e) => {
+
+        //finding the cursor pointer value initialized from 0 in respect to the separate project container
+        const rect = project.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        gsap.to(".floating-div", {
+        left: x,
+        top: y,
+        duration: 0.5,
+        ease: "power3.out",
+        });
+    });
+
+    //disappearing the div as soon as the mouse leaves the project
+    project.addEventListener("mouseleave", () => {
+        document.querySelector(".floating-div").style.display = "none";
+    });
+});
 
         
 };

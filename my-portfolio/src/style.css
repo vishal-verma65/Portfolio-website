@@ -857,7 +857,7 @@ main{
 .project:hover{
   box-shadow: 4px 4px 10px var(--secondaryColor);
 }
-.floatingDiv{
+.floating-div{
   position: absolute;
   top: -50%;
   width: 40rem;
@@ -873,13 +873,13 @@ main{
   pointer-events: none;
   display: none;
 }
-.imgContainer, .floatingDiv-content{
+.img-container, .floating-div-content{
   width: 100%;
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
 }
-.category{
+.floating-category{
   background-color: var(--mainColor);color: var(--primaryColor);
   padding: .2rem .8rem;
   position: absolute;
@@ -890,22 +890,21 @@ main{
   text-transform: uppercase;
   font-weight: 600;
 }
-.desc{
+.floating-desc{
   padding: .5rem;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: .1px;
 }
-.overlay{
+.floating-overlay{
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: transparent;
   z-index: 10000;
 }
-
-.main-floating{
-  display: block;
+.floatingDiv{
+  display: none;
 }
 
 /***** End Project Section styling *****/
