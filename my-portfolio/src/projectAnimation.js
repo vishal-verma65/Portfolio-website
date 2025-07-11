@@ -78,7 +78,5 @@ projects.forEach(project => {
     project.addEventListener("mouseleave", () => {
         document.querySelector(".floating-div").style.display = "none";
     });
-});
-
-        
+});      
 };

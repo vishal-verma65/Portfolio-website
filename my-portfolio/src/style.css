@@ -237,8 +237,6 @@ textarea:focus-visible {
   /* background-color: #b81515; */
   
   & .container{
-    padding: 0;
-    /* max-height: 6rem; */
     padding: .5rem 4rem;
     background-color: var(--primaryColor);
     z-index: 10; 
@@ -313,6 +311,7 @@ main{
 .hero-section{
   width: 100%;
   height: 111vh;
+  height: 111dvh;
   position: relative;
   overflow-y: hidden;
   z-index: 0;
@@ -576,6 +575,7 @@ main{
 /***** About Section styling *****/  
 .about-section{
   height: 110vh;
+  height: 110dvh;
   overflow-y: hidden;
   padding: 0;
   /* background-color: #4f0aa9; */
@@ -914,6 +914,7 @@ main{
 .collaborate-section{
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   padding: 8rem 0 0 0;
   display: flex;
   flex-direction: column;
@@ -998,6 +999,7 @@ main{
 .contact-section{
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   /* background-color: #c10c0c; */
 }
@@ -1076,6 +1078,7 @@ input:hover, textarea:hover {
 .footer-section{
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   padding: 0;
   justify-content: flex-end;
   z-index: 0;
