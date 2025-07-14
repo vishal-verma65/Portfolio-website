@@ -51,7 +51,7 @@ export const heroAnimation = ()=> {
     })
     .from(split.chars[3], {
         duration: .8,
-        y: -100, 
+        y: -140, 
         }, "<")
     .from(split.chars[4], {
         duration: .8,
@@ -77,10 +77,10 @@ export const heroAnimation = ()=> {
         autoAlpha: -1,  
     },2)
     .from(split.chars[8], {
-        y: -100,
+        y: -140,
         duration: 1,
         rotateZ: 90, 
-        ease: "bounce.out"    
+        ease: "bounce.out",  
     })
 
     //developer word animation
@@ -115,7 +115,7 @@ export const heroAnimation = ()=> {
         autoAlpha: -1,
     },2)
     .from(split.chars[15], {
-        y: -100,
+        y: -140,
         duration: 1,
         rotateZ: 90, 
         ease: "bounce"    

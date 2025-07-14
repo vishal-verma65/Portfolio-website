@@ -6,10 +6,10 @@ export const aboutAnimation = ()=>{
 
     //pinning the about main wrapper 
     gsap.to(".about-section .about-main-wrapper",{
-        transform: "translate(-72.5%)",
+        transform: "translate(-74.5%)",
         scrollTrigger: {
             trigger: ".about-section",
-            scroller: "body",
+            // scroller: "body",
             start: "top top",
             end: "+=500%",
             scrub: 2,
@@ -44,7 +44,7 @@ export const aboutAnimation = ()=>{
     //rotating animation of the shape above the tech stack heading 
     gsap.to(".stack-flower img", {
         rotate: "360", 
-        x: 920,
+        x: 900,
         repeat: 0,
         scrollTrigger: {
             trigger: ".about-section",
