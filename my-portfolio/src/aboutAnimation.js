@@ -3,6 +3,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const aboutAnimation = ()=>{
+    if(window.innerWidth < 1010){
+        return false;
+    }
 
     //pinning the about main wrapper 
     gsap.to(".about-section .about-main-wrapper",{

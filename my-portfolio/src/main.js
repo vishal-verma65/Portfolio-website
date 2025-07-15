@@ -48,12 +48,16 @@ function updateToggleButtonPosition(){
 
 //function for updating the position of scrolling circle in respect to the container 
 function updateScrollCirclePosition(){
+
+  if(window.innerWidth < 1400){
+    return false;
+  }
   const scrollCircle = document.querySelector(".scroll-circle");
 
   const containerRight = window.innerWidth - container.getBoundingClientRect().right;
   scrollCircle.style.right = `${containerRight + 20}px`;
 
-  // console.log(containerRight);
+  console.log(containerRight);
 }
 
 window.addEventListener("load", ()=>{
