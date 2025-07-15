@@ -21,7 +21,7 @@ export const projectAnimation = ()=>{
     })
     //stagger animation to all the projects in the project section
     .from(".project",{
-        y:50,
+        y:100,
         autoAlpha: -1,
         duration: 1,
         stagger: .5,
@@ -38,6 +38,9 @@ const projects = document.querySelectorAll(".project");
 projects.forEach(project => {
     const floatingDiv = project.querySelector(".floatingDiv");
 
+    if(window.innerWidth < 1024){
+        return;
+    }
     //setting up the style property of the div to display block and adding the content to it when the mouse enters the particular project
     project.addEventListener("mouseenter", () => {
 

@@ -38,6 +38,9 @@
   --whiteColor: #ffffff;
   --blueColor: #2694F3;
   --textColor: #d9d9d9;
+  --footerIconGlowColor : #071e22;
+  --footerFocusColor: #d9d9d9;
+  --projectTextColor: #d9d9d9;
  
 }
 @media (prefers-color-scheme: light) {
@@ -125,6 +128,7 @@ body::selection{
 .contact-btn:focus-visible, 
 .project-view:focus-visible,
 .project-git-icon:focus-visible,
+.mobile-resume a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
@@ -808,7 +812,11 @@ main{
   /* background-color: #e615bc; */
   z-index: 1;
   padding: .5rem;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  /* justify-content: space-between; */
 
   & .leftPart{
     height: 100%;
@@ -860,7 +868,29 @@ main{
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
-    }
+      animation: gitShine 6s linear infinite;
+      -webkit-animation: gitShine 6s linear infinite;
+}
+  }
+}
+@keyframes gitShine {
+  0%, 100%{
+    box-shadow: 2px 2px 6px var(--textColor);
+  }
+  10%, 90%{
+    box-shadow: 1px 0px 6px var(--textColor);
+  }
+  20%, 80%{
+    box-shadow: 0px 1px 6px var(--textColor);
+  }
+  30%, 70%{
+    box-shadow: -1px 0px 6px var(--textColor);
+  }
+  40%, 60%{
+    box-shadow: 0px -1px 6px var(--textColor);
+  }
+  50%{
+    box-shadow: 0px 0px 6px var(--textColor);
   }
 }
 .project:hover{
@@ -913,7 +943,47 @@ main{
   z-index: 10000;
 }
 .floatingDiv{
+  background-color: var(--secondaryColor);
+  color: var(--projectTextColor);
+  margin: .5rem;
   display: none;
+  
+  & .desc{
+    padding: 1rem;
+    font-size: 1.8rem;
+  }
+  & .imgContainer{
+    position: relative;
+
+    & .category{
+      position: absolute;
+      top: 4%;
+      left: 2%;
+      background-color: var(--primaryColor);
+      box-shadow: 2px 2px 10px var(--whiteColor);
+      color: var(--textColor);
+      padding: .5rem 2rem;
+      font-size: 1.6rem;
+      border-radius: 5rem;
+      -webkit-border-radius: 5rem;
+      -moz-border-radius: 5rem;
+      -ms-border-radius: 5rem;
+      -o-border-radius: 5rem;
+      animation: colorChange 3s linear infinite;
+      -webkit-animation: colorChange 3s linear infinite;
+}
+  }
+}
+@keyframes colorChange {
+  0%, 100%{
+    box-shadow: 2px 2px 10px var(--whiteColor);
+  }
+  25%, 75%{
+    box-shadow: 1px 1px 6px var(--whiteColor);
+  }
+  50%{
+    box-shadow: 0px 0px 2px var(--whiteColor);
+  }
 }
 
 /***** End Project Section styling *****/
@@ -1182,8 +1252,21 @@ input:hover, textarea:hover {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    animation: glow 4s linear infinite;
+    -webkit-animation: glow 4s linear infinite;
 }
-}  
+} 
+@keyframes glow {
+  0%, 100%{
+    box-shadow: 2px 2px 6px var(--footerIconGlowColor);
+  }
+  50%{
+    box-shadow: 0px 2px 4px var(--footerIconGlowColor);
+  }
+  25%, 75%{
+    box-shadow: 2px 0px 2px var(--footerIconGlowColor);
+  } 
+}
 .footer-right{
   width: 40%;
 
@@ -1235,9 +1318,9 @@ input:hover, textarea:hover {
 .mail-id:focus-visible,
 .icons-div a:focus-visible,
 .resume:focus-visible{
-  border: 1px solid var(--textColor);
-  outline: 2px solid var(--textColor);
-  box-shadow: 2px 2px 10px var(--textColor);
+  border: 1px solid var(--footerFocusColor);
+  outline: 2px solid var(--footerFocusColor);
+  box-shadow: 2px 2px 10px var(--footerFocusColor);
 }
 
 .mobile-resume-section{
@@ -1267,7 +1350,19 @@ input:hover, textarea:hover {
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
-
+    animation: shine 4s linear infinite;
+    -webkit-animation: shine 4s linear infinite;
+}
+}
+@keyframes shine {
+  0%, 100%{
+    box-shadow: 2px 2px 6px var(--textColor);
+  }
+  50%{
+    box-shadow: 0px 2px 4px var(--textColor);
+  }
+  25%, 75%{
+    box-shadow: 2px 0px 2px var(--textColor);
   }
 }
 /***** End Footer Section style *****/
@@ -1363,7 +1458,7 @@ input:hover, textarea:hover {
       -moz-transform: translateX(0) translateY(-30%);
       -ms-transform: translateX(0) translateY(-30%);
       -o-transform: translateX(0) translateY(-30%);
-}
+    }
     & .hero-text .line1{
       transform: none;
     }
@@ -1407,6 +1502,22 @@ input:hover, textarea:hover {
   .mobile-resume-section{
     display: block;
   }
+
+  #project-container{
+    gap: 5rem;
+  }
+  .floatingDiv{
+    display: block;
+  }
+  .footer-section{
+    height: 90vh;
+  }
+  .project{
+    box-shadow: 4px 4px 10px var(--secondaryColor);
+  }
+  .project:hover{
+    box-shadow: 4px 4px 10px var(--textColor);
+  }
 }
 @media (width < 870px) {
   html{
@@ -1444,14 +1555,14 @@ input:hover, textarea:hover {
       -ms-transform: translateY(-47%);
       -o-transform: translateY(-47%);
     }
+    & h1{
+      font-size: 10rem;
+    }
   }
   .about-section{
     & .about-main-wrapper .about-me p{
       max-width: 80%;
     }
-  }
-  .footer-section{
-    height: 90vh;
   }
 }
 @media (width < 350px){

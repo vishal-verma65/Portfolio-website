@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const aboutAnimation = ()=>{
-    if(window.innerWidth < 1010){
+    if(window.innerWidth < 1024){
         return false;
     }
 
