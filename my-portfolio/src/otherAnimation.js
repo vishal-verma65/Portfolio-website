@@ -76,6 +76,7 @@ export const otherAnimation = ()=>{
             logoImg.forEach( curElem => {
                 curElem.setAttribute("src", "/images/theme-logo.webp");
             });
+            document.querySelector("#cancel-icon").setAttribute("src", "/images/theme-cancel-icon.svg");
             document.querySelector("#menu-icon").setAttribute("src", "/images/theme-menu-icon.svg");
             document.querySelector("#bg-flower").setAttribute("src", "/images/theme-flower.webp");
             document.querySelector(".scroll-img").setAttribute("src", "/images/theme-circle.webp");
@@ -98,6 +99,7 @@ export const otherAnimation = ()=>{
             logoImg.forEach( curElem => {
                 curElem.setAttribute("src", "/images/logo.webp");
             });
+            document.querySelector("#cancel-icon").setAttribute("src", "/images/cancel-icon.svg");
             document.querySelector("#menu-icon").setAttribute("src", "/images/menu-icon.svg");
             document.querySelector("#bg-flower").setAttribute("src", "/images/hero-flower.webp");
             document.querySelector(".scroll-img").setAttribute("src", "/images/scroll-down-circle.webp");
@@ -138,6 +140,31 @@ export const otherAnimation = ()=>{
         toggle == 0 ? toggle = 1 : toggle = 0;
 
     });
+
+    //fullScreen navigation section 
+    document.querySelector(".menu-btn").addEventListener("click", () => {
+        const tl = gsap.timeline();
+
+        tl.to(".fullNav",{
+            translateX: 0,
+        })
+        .from(".full-nav-item",{
+            x: 50,
+            duration: .3,
+            ease: "power3.inOut",
+            stagger: .2,
+            autoAlpha: 0,
+        })
+
+    });
+    document.querySelector(".cancel-menu").addEventListener("click", () => {
+        const tl = gsap.timeline();
+
+        tl.to(".fullNav",{
+            translateX: "110%",
+        })
+    });
+    
 
 };
 
