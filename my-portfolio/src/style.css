@@ -147,30 +147,6 @@ textarea:focus-visible {
   /* background-color: #a92f2f; */
 }
 
-/*grids*/
-.grid {
-  display: grid;
-}
-.grid-center{
-  display: grid;
-  place-items: center;
-}
-.grid-two--cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid-three--cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-three-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-four--cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-
 /* flex */
 .flex-col-c{
   display: flex;
@@ -307,6 +283,14 @@ textarea:focus-visible {
 .primary-nav{
   display: block;
 }
+/* .fullNav{
+  background-color: #520c78;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+} */
 /***** End Nav Section *****/
 
 main{
@@ -323,7 +307,7 @@ main{
   overflow-y: hidden;
   z-index: 0;
   /* padding-top: 4vw; */
-  /* background-color: #8a0505; */
+
   & .container{
     height: 100%;
     /* background-color: #17065b; */
@@ -1428,7 +1412,7 @@ input:hover, textarea:hover {
     top: 40%;
   }
   .hero-section{
-    height: 100vh;
+    height: 90vh;
 
     & .hero-heading h1{
       letter-spacing: .1px;
@@ -1442,7 +1426,7 @@ input:hover, textarea:hover {
       -o-transform: none;
     }
     & .hero-bg{
-      width: 63rem;
+      width: 60rem;
     }
     & .hero-bg-ribbon-d{
       left: -10%
