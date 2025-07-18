@@ -13,7 +13,7 @@
         "id": 2,
         "title": "My Portfolio Website",
         "techUsed": "Html Css JavaScript Gsap",
-        "viewLink": "index.html",
+        "viewLink": "https://vishalvermaprofile.netlify.app/",
         "repoLink": "https://github.com/vishal-verma65/Portfolio-website",
         "landingPageImg": "/images/portfolio.webp",
         "description": "A clean and responsive portfolio website built with HTML, CSS, and JavaScript. Animations are powered by GSAP for smooth transitions and effects. Developed using Vite for fast performance and modern build setup.",
