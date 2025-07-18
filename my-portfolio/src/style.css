@@ -6,14 +6,14 @@
 @font-face {
   font-family: 'Roboto';
   src: url('/fonts/roboto.ttf') format('truetype');
-  font-weight: 100 900; /* Variable range */
+  font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Urbanist';
   src: url('/fonts/urbanist.ttf') format('truetype');
-  font-weight: 100 900; /* full variable weight range */
+  font-weight: 100 900;
   font-style: normal;
 }
 :root {
@@ -65,7 +65,6 @@ html{
 }
 body {
   margin: 0 auto;
-  /* padding: 0 32px; */
   width: 100%;
   min-width: 320px;
   height: 100%;
@@ -144,7 +143,6 @@ textarea:focus-visible {
   padding: 2rem;
   text-align: center;
   overflow-x: hidden;
-  /* background-color: #a92f2f; */
 }
 
 /* flex */
@@ -215,25 +213,21 @@ textarea:focus-visible {
   top: 0;
   left: 0;
   z-index: 10;
-  /* background-color: #b81515; */
   
   & .container{
     padding: .5rem 4rem;
     background-color: var(--primaryColor);
     z-index: 10; 
-    /* background-color: #1eb039; */
   }
   & .logo-container{
     width: 6rem;
     height: auto;
     margin-top: 1rem;
-    /* background-color: #36119b; */
   }
   .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: #860e70; */
 
     & ul{
       display: flex;
@@ -267,7 +261,6 @@ textarea:focus-visible {
   -moz-transition: all .5s linear;
   -ms-transition: all .5s linear;
   -o-transition: all .5s linear;
-  /* background-color: #9e3030; */
 
   & img {
     width: 2rem;
@@ -291,6 +284,7 @@ textarea:focus-visible {
   top: 0;
   height: 100dvh;
   width: 60%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -318,16 +312,16 @@ textarea:focus-visible {
   text-align: left;
 
   & li a{
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 .resume-link{
   text-align: left;
-  margin: -3rem;
+  margin-right: -3rem;
+  margin-left: -3rem;
 }
 .secondary-nav .icons-div{
   text-align: left;
-  /* padding: 15rem 5rem 5rem 5rem; */
   gap: 1rem;
   border: none;
 
@@ -349,15 +343,12 @@ main{
 .hero-section{
   width: 100%;
   height: 111vh;
-  /* height: 111dvh; */
   position: relative;
   overflow-y: hidden;
   z-index: 0;
-  /* padding-top: 4vw; */
 
   & .container{
     height: 100%;
-    /* background-color: #17065b; */
     position: relative;
   }
 }
@@ -365,12 +356,9 @@ main{
   text-align: left;
   position: relative;
   z-index: 1;
-  /* overflow: hidden; */
-  /* background-color: #2ae65c; */
   width: fit-content;
   
   & h1{
-    /* background-color: #3dc223; */
     letter-spacing: -6px;
     font-size: 12rem;
     font-weight: 700;
@@ -380,7 +368,6 @@ main{
     -moz-transform: translateY(-14%);
     -ms-transform: translateY(-14%);
     -o-transform: translateY(-14%);
-    /* color: var(--mainColor); */
       
     & span{
       display: inline-block;
@@ -401,7 +388,6 @@ main{
       -ms-transform: translate(13%);
       -o-transform: translate(13%);
       position: relative;
-      /* background-color: #7b0e0e; */
       height: 12rem;
     }
   }
@@ -442,7 +428,6 @@ main{
   width: 65rem;
   height: auto;
   padding: 0 7.3rem 5.5rem 5rem;
-  /* background-color: #940f7a; */
   transform: translate(-50% -50%);
   -webkit-transform: translate(-50% -50%);
   -moz-transform: translate(-50% -50%);
@@ -468,7 +453,6 @@ main{
   width: 25rem;
   height: auto;
   user-select: none;
-  /* background-color: #940f7a;*/
 
    & img{
     object-fit: cover;   
@@ -481,7 +465,6 @@ main{
   width: 11rem;
   height: auto;
   user-select: none;
-  /* background-color: #940f7a;*/
 
    & img{
     object-fit: cover;    
@@ -495,7 +478,7 @@ main{
   height: auto;
   user-select: none;
   z-index: 2;
-  /* background-color: #940f7a;*/
+
   & img{
     object-fit: cover;   
   }
@@ -508,7 +491,6 @@ main{
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  /* background-color: #840a0a; */
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -524,7 +506,6 @@ main{
   & .circle{
     width: 60%;
     height: 60%;
-    /* background-color: #a30f0f; */
     position: absolute;
     bottom: 22%;
     left: 20%;
@@ -551,7 +532,6 @@ main{
 .down-arrow-div{
   width: 5rem;
   height: auto;
-  /* background-color: #720606; */
   display: grid;
   place-items: center;
   position: absolute;
@@ -594,7 +574,6 @@ main{
   height: auto;
 }
 .ball{
-  /* display: none; */
   width: 1.6rem;
   height: 1.6rem;
   background-color: var(--mainColor);
@@ -614,19 +593,14 @@ main{
 .about-section{
   width: 100vw;
   height: 110vh;
-  /* height: 110dvh; */
   overflow-y: hidden;
   overflow-x: hidden;
   padding: 0;
-  /* background-color: #5410ac; */
 }
 .about-main-wrapper{
-  /* width: 100%; */
   height: 80%;
-  /* background-color: #390a6e; */
 }
 .about-me{
-  /* background-color: #087b0a; */
   width: 100vw;
   padding: 1rem;
   position: relative;
@@ -661,7 +635,6 @@ main{
   padding: .5rem;
 }
 .tech-stack, .tools, .availability{
-  /* background-color: #442aa1; */
   width: fit-content;
   padding: 1rem 5rem;
   position: relative;
@@ -676,7 +649,6 @@ main{
     width: 7rem;
     height: 9rem;
     gap: .5rem;
-    /* background-color: #c50f0f; */
 
     & img, h3{
       transition: all .3s ease-in;
@@ -711,7 +683,6 @@ main{
   right: -25%;
   width: 10rem;
   height: auto;
-  /*background-color: #fff;
   */z-index: 10;
     transition: all 1s linear;
     -webkit-transition: all 1s linear;
@@ -745,7 +716,6 @@ main{
     max-width: 40rem;
     padding: .5rem 0;
     position: relative;
-    /* background-color: #6a0f0f; */
   }
   & p{
     font-size: 1.5rem;
@@ -814,14 +784,12 @@ main{
   padding: 2rem;
   padding-bottom: 8rem;
   overflow: visible;
-  /* background-color: #c00b0b; */
 }
 .project-wrapper{
   text-align: left;
   width: 100%;
   padding: 2rem;
   gap: 1rem;
-  /* background-color: #6e27b9; */
 
   & h2{
     font-size: 5rem;
@@ -837,23 +805,18 @@ main{
   flex-direction: column;
   gap: 1.5rem;
   position: relative;
-  /* background-color: #49a10e; */
 }
 .project{
-  /* background-color: #e615bc; */
   z-index: 1;
   padding: .5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 
-  /* justify-content: space-between; */
-
   & .leftPart{
     height: 100%;
     width: 100%;
     padding: .5rem;
-    /* background-color: #cfc214; */
 
     & .projectTitle{
       font-size: 2.5rem;
@@ -872,12 +835,10 @@ main{
     width: fit-content;
     padding: .5rem;
     gap: 1rem;
-    /* background-color: #cfc214; */
 
     & .project-view{
       border: 1px solid var(--secondaryColor);
       align-items: center;
-      /* background-color: #0ebac6; */
       font-size: 1.5rem;
       padding: .2rem 1rem;
       gap: .2rem;
@@ -1024,13 +985,11 @@ main{
 .collaborate-section{
   width: 100%;
   height: 100vh;
-  /* height: 100dvh; */
   padding: 8rem 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  /* background-color: #4d0db4; */
 }
 .top-slider, .bottom-slider, .footer-slider{
   width: 100%;
@@ -1043,18 +1002,15 @@ main{
   & .inner-content{
     width: fit-content;
     gap: 9.5rem;
-    /* background-color: #1c7770; */
   }
   & h3{
     font-size: 2.4rem;
     text-transform: uppercase;
     white-space: nowrap;
-    /* background-color: #ce0d81; */
   }
   & .slider-icon{
     width: 3.2rem;
     height: auto;
-    /* background-color: #16ab40; */
   }
 }
 .cover, .cover2{
@@ -1063,7 +1019,6 @@ main{
   gap: 9.5rem;
 }
 .bottom-slider{
-  /* background-color: #7c0b0b; */
   background-color: transparent;
   border-top: 2px solid var(--secondaryColor);
   border-bottom: 2px solid var(--secondaryColor);
@@ -1090,7 +1045,7 @@ main{
 .collaboration-content{
   position: relative;
   width: fit-content;
-  /* background-color: #7e4cb8; */
+
   & span{
     display: inline-block;
     font-size: 4.5rem;
@@ -1109,9 +1064,8 @@ main{
 .contact-section{
   width: 100%;
   height: 90vh;
-  /* height: 90dvh; */
+  padding: 2rem;
   overflow: hidden;
-  /* background-color: #c10c0c; */
 }
 .contact-wrapper{
   margin-top: 5rem;
@@ -1120,13 +1074,11 @@ main{
   width: auto;
   gap: 1rem;
   padding: 1.5rem;
-  /* background-color: #119f09; */
 
   & p{
     text-align: left;
     font-size: 1.6rem;
     letter-spacing: -.01px;
-    /* background-color: #03a951; */
   }
 }
 form{
@@ -1188,12 +1140,10 @@ input:hover, textarea:hover {
 .footer-section{
   width: 100%;
   height: 80vh;
-  /* height: 80dvh; */
   padding: 0;
   justify-content: flex-end;
   align-items: center;
   z-index: 0;
-  /* background-color: #07a035; */
 }
 .footer-content-container{
   width: 100%;
@@ -1237,10 +1187,8 @@ input:hover, textarea:hover {
   display: flex;
   align-items: center;
   gap: 1rem;
-  /* background-color: #a41616; */
 
   & .mail-icon{
-    /* background-color: #6f0e9c; */
     width: 2rem;
     height: auto;
   }
@@ -1258,7 +1206,6 @@ input:hover, textarea:hover {
   }
 
   .footer-para-div{
-    /* background-color: #351789; */
     padding: 2.4rem 1rem;
     border-bottom: 1px solid var(--greyColor);
 
@@ -1274,7 +1221,7 @@ input:hover, textarea:hover {
   padding: 2rem 1rem;
   display: flex;
   gap: 1.5rem;
-  /* background-color: #c61515; */
+
   & .icon{
     width: 3rem;
     height: auto;
@@ -1358,7 +1305,7 @@ input:hover, textarea:hover {
   display: none;
   align-content: center;
   width: 100%;
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
   padding: 5rem 2rem;
 }
 .mobile-resume, .resume-link{
@@ -1459,7 +1406,7 @@ input:hover, textarea:hover {
     top: 40%;
   }
   .hero-section{
-    height: 90vh;
+    height: 100vh;
 
     & .hero-heading h1{
       letter-spacing: .1px;
@@ -1523,6 +1470,11 @@ input:hover, textarea:hover {
   }
   .contact-section, .collaborate-section{
     height: 72vh;
+    min-height: 450px;
+  }
+  .footer-section{
+    height: 100vh;
+    min-height: 600px;
   }
   .footer-right{
     display: none;
@@ -1540,9 +1492,6 @@ input:hover, textarea:hover {
   .floatingDiv{
     display: block;
   }
-  .footer-section{
-    height: 90vh;
-  }
   .project{
     box-shadow: 4px 4px 10px var(--secondaryColor);
   }
@@ -1551,11 +1500,15 @@ input:hover, textarea:hover {
   }
 }
 @media (width < 870px) {
+   .mobile-resume-section{
+      margin-bottom: 8rem;
+      padding: 5rem 2rem;
+    }
+}
+@media (width < 900px) {
   html{
   font-size: 43.25%;
   }
-}
-@media (width < 900px) {
   .hero-section .hero-heading {
     & .hero-text{
       line-height: .8;
@@ -1570,6 +1523,9 @@ input:hover, textarea:hover {
   }
 }
 @media (width < 500px) {
+  .hero-section{
+    height: 90vh;
+  }
   .collaborate-section {
     & .collaboration-content{
       width: 90%;
@@ -1606,3 +1562,5 @@ input:hover, textarea:hover {
   }
 }
 /***** End responsive Section *****/
+
+/*! Completely designed and coded by Vishal Verma */

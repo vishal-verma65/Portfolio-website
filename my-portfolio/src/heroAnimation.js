@@ -168,3 +168,4 @@ export const heroAnimation = ()=> {
     },5)
 
 };
+

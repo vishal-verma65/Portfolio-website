@@ -30,7 +30,7 @@ export const otherAnimation = ()=>{
                 trigger: ".inner-circle",
                 scroller: "body",
                 start: "top 90%",
-                end: "+=1400%",
+                end: "+=1300%",
                 scrub: true,
             }
         });
@@ -164,23 +164,18 @@ export const otherAnimation = ()=>{
             translateX: "110%",
         })
     });
+
+    const gmailDiv = document.querySelector(".mail-div");
+
+    gmailDiv.addEventListener("click", () => {
+        navigator.clipboard.writeText("sayhello.vishalverma@gmail.com").then(() => {
+        alert("Copied to clipboard");
+        }).catch(err => {
+        console.error("Please try again");
+        });
+    });
     
 
 };
 
 
-
-// function desktopRotation(){
-//     let rotation = 0;
-//         window.addEventListener("wheel", (event)=>{
-//             const direction = event.deltaY > 0 ? 1 : -1;
-
-//             rotation += 5 * direction;
-
-//             gsap.to(".scroll-img",{
-//                 rotation: rotation,
-//                 duration: 1,
-//                 ease: "power3.out",
-//             });
-//         });
-// }

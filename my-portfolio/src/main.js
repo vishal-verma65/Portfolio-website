@@ -7,10 +7,6 @@ import projects from "../api/projects.json";
 import { projectAnimation } from "./projectAnimation";
 import { otherAnimation } from "./otherAnimation";
 
-// const screenWidth = window.innerWidth;
-// console.log(screenWidth);
-// const screenHeight = window.innerHeight;
-// console.log(screenHeight);
 
 //loader animation
 window.addEventListener("load", () => {
