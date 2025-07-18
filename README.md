@@ -5,7 +5,7 @@ The design and development of this website have been done entirely by me. I thor
 
 
 🚀 Live Preview
-🔗 View Live Site
+🔗 vishalvermaprofile.netlify.app
 
 
 🛠️ Tech Stack
