@@ -683,7 +683,7 @@ main{
   right: -25%;
   width: 10rem;
   height: auto;
-  */z-index: 10;
+  z-index: 10;
     transition: all 1s linear;
     -webkit-transition: all 1s linear;
     -moz-transition: all 1s linear;
