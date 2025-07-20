@@ -707,7 +707,7 @@ main{
   width: 6rem;
 }
 .availability{
-  margin-left: 42rem;
+  margin-left: 48rem;
   padding: 0 0 1rem 15rem;
   text-align: center;
 
@@ -1473,6 +1473,7 @@ input:hover, textarea:hover {
     min-height: 450px;
   }
   .footer-section{
+    padding-top: 1rem;
     height: 100vh;
     min-height: 600px;
   }
